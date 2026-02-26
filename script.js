@@ -4,6 +4,40 @@ window.addEventListener('scroll', function () {
     header.classList.toggle('sticky', window.scrollY > 50);
 });
 
+// Mobile Menu
+const header = document.getElementById('main-header');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+function closeMobileMenu() {
+    if (!header || !menuToggle) return;
+    header.classList.remove('nav-open');
+    document.body.classList.remove('nav-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+}
+
+if (menuToggle && header) {
+    menuToggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        document.body.classList.toggle('nav-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 968) {
+            closeMobileMenu();
+        }
+    });
+}
+
 // Smooth Scroll for Navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
