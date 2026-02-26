@@ -25,6 +25,19 @@ if (menuToggle && header) {
         menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
     });
 
+    document.addEventListener('click', (event) => {
+        if (!header.classList.contains('nav-open')) return;
+        if (!header.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+
     if (navLinks) {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);

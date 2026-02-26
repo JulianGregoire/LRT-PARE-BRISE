@@ -1281,3 +1281,97 @@ footer {
         gap: 0.1rem;
     }
 }
+
+/* Mobile Stability Overrides */
+@media (max-width: 968px) {
+    body.nav-open {
+        overflow-y: auto;
+    }
+
+    nav {
+        position: relative;
+        flex-wrap: nowrap;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .menu-toggle {
+        margin-left: auto;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 0.4rem);
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 7.5rem;
+    }
+
+    .hero-content {
+        padding-top: 0;
+    }
+
+    .hero-info-bar {
+        position: relative;
+    }
+
+    .services,
+    .about,
+    .contact,
+    .map-section {
+        padding: 4.5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 110px;
+    }
+
+    .hero {
+        padding-top: 7rem;
+    }
+
+    .hero-btns .btn {
+        max-width: none;
+    }
+
+    .step-indicator {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .step-indicator::before {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 0.55rem 0;
+    }
+
+    .hero {
+        padding-top: 6.6rem;
+    }
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .bar-item {
+        gap: 0.65rem;
+    }
+
+    .bar-item p {
+        line-height: 1.35;
+    }
+}
