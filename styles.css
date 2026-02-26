@@ -1311,16 +1311,30 @@ footer {
     }
 
     .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
         min-height: auto;
         padding-top: 7.5rem;
     }
 
     .hero-content {
+        width: 100%;
         padding-top: 0;
+        padding-bottom: 1rem;
     }
 
     .hero-info-bar {
-        position: relative;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .service-row,
+    .service-row:nth-child(even) {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 
     .services,

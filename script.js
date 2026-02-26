@@ -77,6 +77,9 @@ const revealOnScroll = () => {
 };
 
 window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+window.addEventListener('resize', revealOnScroll);
+revealOnScroll();
 
 // Multi-step Form Logic
 const form = document.getElementById('appointment-form');
