@@ -578,6 +578,38 @@ body.nav-open {
     margin-bottom: 3rem;
 }
 
+.step-1-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.step-1-layout .option-grid {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.glass-image-preview {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-image-preview img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .step-1-layout {
+        flex-direction: column;
+    }
+}
+
 .option-card {
     cursor: pointer;
     position: relative;

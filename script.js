@@ -147,3 +147,26 @@ if (form) {
         updateForm();
     });
 }
+
+// Dynamic Image Update for Glass Type
+const glassTypeInputs = document.querySelectorAll('input[name="glass_type"]');
+const dynamicGlassImage = document.getElementById('dynamic-glass-image');
+
+const glassImages = {
+    'parebrise': 'image/pare-brise.png',
+    'lunette_arriere': 'image/lunette aririere.png',
+    'vitre_laterale_droite': 'image/Vitre-droit.png',
+    'vitre_laterale_gauche': 'image/Vitre-gauche.png',
+    'phare': 'image/Phare optique.png',
+    'toit_panoramique': 'image/Toit panoramique.png'
+};
+
+if (glassTypeInputs.length > 0 && dynamicGlassImage) {
+    glassTypeInputs.forEach(input => {
+        input.addEventListener('change', (e) => {
+            if (glassImages[e.target.value]) {
+                dynamicGlassImage.src = glassImages[e.target.value];
+            }
+        });
+    });
+}

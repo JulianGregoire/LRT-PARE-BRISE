@@ -108,43 +108,48 @@
                         <!-- Step 1: Vitre -->
                         <div class="form-step active" id="step-1">
                             <h3>Étape 1 : Quelle vitre est concernée ?</h3>
-                            <div class="option-grid">
-                                <label class="option-card">
-                                    <input type="radio" name="glass_type" value="parebrise" required>
-                                    <div class="card-content">
-                                        <span>Pare-brise</span>
-                                    </div>
-                                </label>
-                                <label class="option-card">
-                                    <input type="radio" name="glass_type" value="lunette_arriere">
-                                    <div class="card-content">
-                                        <span>Lunette arrière</span>
-                                    </div>
-                                </label>
-                                <label class="option-card">
-                                    <input type="radio" name="glass_type" value="vitre_laterale_droite">
-                                    <div class="card-content">
-                                        <span>Vitre latérale droite</span>
-                                    </div>
-                                </label>
-                                <label class="option-card">
-                                    <input type="radio" name="glass_type" value="vitre_laterale_gauche">
-                                    <div class="card-content">
-                                        <span>Vitre latérale gauche</span>
-                                    </div>
-                                </label>
-                                <label class="option-card">
-                                    <input type="radio" name="glass_type" value="phare">
-                                    <div class="card-content">
-                                        <span>Phare optique</span>
-                                    </div>
-                                </label>
-                                <label class="option-card">
-                                    <input type="radio" name="glass_type" value="toit_panoramique">
-                                    <div class="card-content">
-                                        <span>Toit panoramique</span>
-                                    </div>
-                                </label>
+                            <div class="step-1-layout">
+                                <div class="option-grid">
+                                    <label class="option-card">
+                                        <input type="radio" name="glass_type" value="parebrise" required>
+                                        <div class="card-content">
+                                            <span>Pare-brise</span>
+                                        </div>
+                                    </label>
+                                    <label class="option-card">
+                                        <input type="radio" name="glass_type" value="lunette_arriere">
+                                        <div class="card-content">
+                                            <span>Lunette arrière</span>
+                                        </div>
+                                    </label>
+                                    <label class="option-card">
+                                        <input type="radio" name="glass_type" value="vitre_laterale_droite">
+                                        <div class="card-content">
+                                            <span>Vitre latérale droite</span>
+                                        </div>
+                                    </label>
+                                    <label class="option-card">
+                                        <input type="radio" name="glass_type" value="vitre_laterale_gauche">
+                                        <div class="card-content">
+                                            <span>Vitre latérale gauche</span>
+                                        </div>
+                                    </label>
+                                    <label class="option-card">
+                                        <input type="radio" name="glass_type" value="phare">
+                                        <div class="card-content">
+                                            <span>Phare optique</span>
+                                        </div>
+                                    </label>
+                                    <label class="option-card">
+                                        <input type="radio" name="glass_type" value="toit_panoramique">
+                                        <div class="card-content">
+                                            <span>Toit panoramique</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="glass-image-preview">
+                                    <img id="dynamic-glass-image" src="image/voiture.png" alt="Voiture">
+                                </div>
                             </div>
                             <div class="form-nav">
                                 <button type="button" class="btn btn-primary next-step">Suivant</button>
