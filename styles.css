@@ -324,11 +324,15 @@ body.nav-open {
 
     .bar-items {
         flex-direction: column;
+        align-items: center;
         gap: 3rem;
     }
 
     .bar-item {
         flex: 1 1 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -824,6 +828,20 @@ body.nav-open {
     font-size: 0.95rem;
 }
 
+/* JotForm Section */
+.jotform-section {
+    padding: 7rem 0;
+    background-color: var(--grey);
+}
+
+.jotform-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
 /* Franchise Callout v3 */
 .franchise-callout {
     display: flex;
@@ -1281,12 +1299,21 @@ footer {
     }
 
     .bar-item {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .service-image {
         height: 260px;
         border-radius: 22px;
+    }
+
+    .jotform-section {
+        padding: 4rem 0;
+    }
+
+    .jotform-container {
+        padding: 1rem;
+        border-radius: 20px;
     }
 
     .about-header {
