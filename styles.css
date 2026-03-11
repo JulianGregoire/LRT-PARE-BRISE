@@ -141,7 +141,7 @@ body.nav-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 50, 150, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%), url('image/hero-pare-brise.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(77, 184, 255, 0.25) 0%, rgba(0, 50, 150, 0.7) 100%), url('image/hero-pare-brise.jpg') no-repeat center center/cover;
     z-index: 1;
 }
 
@@ -159,9 +159,9 @@ body.nav-open {
 }
 
 .hero h1 span {
-    color: #4db8ff;
-    /* Lighter blue for better contrast */
-    text-shadow: 0 0 10px rgba(0, 74, 173, 0.5);
+    color: #7abfff;
+    /* Softer, lighter blue */
+    text-shadow: none;
 }
 
 .hero p {
@@ -1543,8 +1543,8 @@ footer {
     }
 
     .hero h1 span {
-        color: #4db8ff !important;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+        color: #7abfff !important;
+        text-shadow: none !important;
     }
 
     .hero p {
