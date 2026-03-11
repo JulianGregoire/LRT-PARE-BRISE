@@ -342,7 +342,11 @@ body.nav-open {
     }
 
     .bar-divider {
-        display: none;
+        display: block;
+        width: 80%;
+        height: 1px;
+        background: #e0e0e0;
+        margin: 0;
     }
 }
 
@@ -1589,6 +1593,14 @@ footer {
         font-size: 1.15rem !important;
         line-height: 1.4 !important;
         text-align: center !important;
+    }
+
+    .bar-divider {
+        display: block !important;
+        width: 80% !important;
+        height: 1px !important;
+        background: #e0e0e0 !important;
+        margin: 0 !important;
     }
 
     .service-row {
