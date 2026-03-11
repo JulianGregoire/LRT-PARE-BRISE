@@ -159,13 +159,16 @@ body.nav-open {
 }
 
 .hero h1 span {
-    color: var(--primary);
+    color: #4db8ff;
+    /* Lighter blue for better contrast */
+    text-shadow: 0 0 10px rgba(0, 74, 173, 0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
     color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-btns {
@@ -303,12 +306,43 @@ body.nav-open {
 
 @media (max-width: 968px) {
     .bar-items {
-        flex-wrap: wrap;
-        gap: 3rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
     }
 
     .bar-item {
-        flex: 1 1 40%;
+        flex: 1;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .bar-item .icon-svg {
+        height: 40px;
+    }
+
+    .bar-item .icon-svg img {
+        max-width: 35px;
+    }
+
+    .bar-item.price-item .price-val {
+        height: 40px;
+    }
+
+    .bar-item.price-item .price-val strong {
+        font-size: 1.5rem;
+    }
+
+    .bar-item.price-item .price-val span {
+        font-size: 0.8rem;
+    }
+
+    .bar-item p {
+        font-size: 0.65rem;
+        line-height: 1.2;
     }
 
     .bar-divider {
@@ -323,16 +357,15 @@ body.nav-open {
     }
 
     .bar-items {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 3rem;
+        gap: 0.5rem;
     }
 
     .bar-item {
-        flex: 1 1 100%;
-        width: 100%;
-        align-items: center;
-        text-align: center;
+        flex: 1;
+        width: auto;
+        padding: 0.2rem;
     }
 }
 
@@ -367,15 +400,21 @@ body.nav-open {
 }
 
 .services-subtitle .highlight-franchise {
-    display: inline-block;
-    background-color: var(--primary);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
+    display: block;
+    color: var(--primary);
+    padding: 1rem 0;
     font-weight: 800;
     margin-top: 1.5rem;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+    font-size: 1.3rem;
+    background: transparent;
+    text-align: center;
+}
+
+.services-subtitle .highlight-franchise span {
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding: 0.5rem 0;
+    display: inline-block;
 }
 
 .services-list {
@@ -1221,8 +1260,11 @@ footer {
     }
 
     .service-image {
-        width: 100%;
-        height: 320px;
+        width: 100% !important;
+        height: 320px !important;
+        display: block !important;
+        background-color: #eee;
+        /* Debug color */
     }
 
     .service-info h3 {
@@ -1290,8 +1332,11 @@ footer {
     }
 
     .service-image {
-        height: 260px;
+        height: 260px !important;
         border-radius: 22px;
+        display: block !important;
+        background-color: #eee;
+        /* Debug color */
     }
 
 
@@ -1423,7 +1468,8 @@ footer {
     }
 
     .map-container iframe {
-        height: 280px;
+        height: 350px;
+        display: block !important;
     }
 
     .hours-list li {
@@ -1525,7 +1571,32 @@ footer {
         transition: none;
     }
 
-    .services,
+    .service-image {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        height: 300px !important;
+        min-height: 300px !important;
+        width: 100% !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .map-container,
+    .map-container iframe {
+        display: block !important;
+        height: 350px !important;
+        min-height: 350px !important;
+        width: 100% !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .services {
+        padding: 4.5rem 0;
+    }
+
     .about,
     .contact,
     .map-section {
@@ -1574,12 +1645,13 @@ footer {
     }
 
     .bar-item {
-        gap: 1rem;
-        padding: 1rem;
+        gap: 0.3rem !important;
+        padding: 0.2rem !important;
     }
 
     .bar-item p {
-        line-height: 1.4;
-        font-size: 0.85rem;
+        line-height: 1.1 !important;
+        font-size: 0.55rem !important;
+        text-align: left;
     }
 }
