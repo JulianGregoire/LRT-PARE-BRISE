@@ -1509,6 +1509,18 @@ footer {
         box-shadow: none;
     }
 
+    .nav-links li a[href="#contact"] {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 74, 173, 0.4);
+    }
+
     /* Consolidated Mobile Layout Fixes */
     .hero {
         display: flex !important;
