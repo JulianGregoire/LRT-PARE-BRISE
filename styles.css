@@ -1650,3 +1650,81 @@ footer {
         display: none;
     }
 }
+
+/* Floating Phone Button */
+.floating-phone {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.floating-phone:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.floating-phone .phone-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.floating-phone svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.floating-phone .phone-number {
+    max-width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    padding-right: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@media (min-width: 768px) {
+    .floating-phone:hover .phone-number {
+        max-width: 200px;
+        opacity: 1;
+        padding-right: 25px;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .floating-phone {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .floating-phone .phone-icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .floating-phone svg {
+        width: 24px;
+        height: 24px;
+    }
+}
